@@ -3,26 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personality Quiz</title>
+    <title>Swiss Cottage Secondary School - Stress & Success Quiz</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header class="quiz-header">
-            <h1>🌟 Discover Your Persoality! 🌟</h1>
-            <p>Answer a few fun questions to find out more about yourself!</p>
+            <div class="school-logo">
+                <span style="font-size: 2.5em;">🏫</span>
+            </div>
+            <div class="school-name">Swiss Cottage Secondary School</div>
+            <h1>🌟 Student Success & Stress Quiz 🌟</h1>
+            <p>Discover how you handle success and stress in your student journey!</p>
+            
+            <div class="student-avatars">
+                <div class="avatar" style="--i: 0;">👦🏻</div>
+                <div class="avatar" style="--i: 1;">👧🏻</div>
+                <div class="avatar" style="--i: 2;">👦🏽</div>
+                <div class="avatar" style="--i: 3;">👧🏽</div>
+                <div class="avatar" style="--i: 4;">👦🏾</div>
+                <div class="avatar" style="--i: 5;">👧🏾</div>
+            </div>
         </header>
 
         <div id="quiz-container" class="quiz-container">
             <div id="question-container" class="question-container">
+                <div class="stress-symbols">
+                    <span title="Social Media">📱</span>
+                    <span title="Academic">📚</span>
+                    <span title="Family">👨‍👩‍👧‍👦</span>
+                    <span title="Society">🏙️</span>
+                    <span title="Goals">🎯</span>
+                </div>
+                
                 <div class="progress-bar">
                     <div id="progress" class="progress"></div>
                 </div>
                 
                 <div id="question-number" class="question-number"></div>
                 <h2 id="question-text" class="question-text"></h2>
-                <div id="question-image" class="question-image"></div>
+                
+                <div id="question-image" class="question-image">
+                    <div id="main-icon" class="main-icon"></div>
+                    <div class="context-symbols">
+                        <div class="symbol-group">
+                            <div class="symbol">🏫</div>
+                            <div class="label">School</div>
+                        </div>
+                        <div class="symbol-group">
+                            <div class="symbol">👥</div>
+                            <div class="label">Social</div>
+                        </div>
+                        <div class="symbol-group">
+                            <div class="symbol">🏆</div>
+                            <div class="label">Success</div>
+                        </div>
+                        <div class="symbol-group">
+                            <div class="symbol">⚡</div>
+                            <div class="label">Pressure</div>
+                        </div>
+                    </div>
+                </div>
                 
                 <div id="answers-container" class="answers-container"></div>
                 
@@ -30,11 +72,30 @@
             </div>
 
             <div id="result-container" class="result-container hidden">
-                <h2>Your Result:</h2>
-                <div id="result-content" class="result-content"></div>
-                <button onclick="restartQuiz()" class="restart-btn">Take Quiz Again</button>
+                <h2>Your Student Profile:</h2>
+                <div id="result-content" class="result-content">
+                    <div class="success-indicators">
+                        <div class="success-indicator">
+                            <div class="icon">🎯</div>
+                            <div class="text">Goals</div>
+                        </div>
+                        <div class="success-indicator">
+                            <div class="icon">🧠</div>
+                            <div class="text">Mental Health</div>
+                        </div>
+                        <div class="success-indicator">
+                            <div class="icon">👥</div>
+                            <div class="text">Social</div>
+                        </div>
+                        <div class="success-indicator">
+                            <div class="icon">📚</div>
+                            <div class="text">Academic</div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="restartQuiz()" class="restart-btn">🔄 Take Quiz Again</button>
                 <div class="share-buttons">
-                    <button onclick="shareResult()" class="share-btn">📢 Share Result</button>
+                    <button onclick="shareResult()" class="share-btn">📢 Share with Friends</button>
                 </div>
             </div>
         </div>
