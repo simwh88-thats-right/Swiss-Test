@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="quiz-header">
+            <h1>🌟 Discover Your Personality! 🌟</h1>
+            <p>Answer a few fun questions to find out more about yourself!</p>
+        </header>
+
+        <div id="quiz-container" class="quiz-container">
+            <div id="question-container" class="question-container">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                
+                <div id="question-number" class="question-number"></div>
+                <h2 id="question-text" class="question-text"></h2>
+                <div id="question-image" class="question-image"></div>
+                
+                <div id="answers-container" class="answers-container"></div>
+                
+                <button id="next-btn" class="next-btn" onclick="nextQuestion()">Next Question</button>
+            </div>
+
+            <div id="result-container" class="result-container hidden">
+                <h2>Your Result:</h2>
+                <div id="result-content" class="result-content"></div>
+                <button onclick="restartQuiz()" class="restart-btn">Take Quiz Again</button>
+                <div class="share-buttons">
+                    <button onclick="shareResult()" class="share-btn">📢 Share Result</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
