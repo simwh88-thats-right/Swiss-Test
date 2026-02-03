@@ -6,7 +6,7 @@ const quizData = {
             question: "What's your ideal way to spend a weekend?",
             image: "🌟", // You can replace with actual image URLs
             answers: [
-                { text: "Reading a book at home", type: "owl" },
+                { text: "Reading a book in home", type: "owl" },
                 { text: "Going on an adventure outdoors", type: "wolf" },
                 { text: "Socializing with friends", type: "dolphin" },
                 { text: "Working on a creative project", type: "cat" }
